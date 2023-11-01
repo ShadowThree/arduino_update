@@ -1,6 +1,7 @@
 # arduino_update
 [Arduino入门参考](https://blog.csdn.net/qq_29506411/article/details/134164156)
-
+## 注意
+1. 这个例程是针对串口的`DTR`管脚没有和`MCU`的`reset`管脚连接的情况使用的。如果串口的`DTR`已经连接到`MCU`的`reset`管脚了，那么就不需要这么麻烦，通过`Tools-->Burn Bootloader`后，直接写`application`就好，不需要实现跳转部分的代码，因为串口的`DTR`管脚会使`MCU`复位，然后进入`bootloader`等待更新。
 ## How to use?
 1. open upload log output.
 ![config upload output](./resource/config_upload_output.png)
